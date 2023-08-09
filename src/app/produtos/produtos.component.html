@@ -42,7 +42,7 @@
                             <td>{{ produto.nome }}</td>
                             <td>{{ produto.quantidade }}</td>
                             <td>
-                                <button class="btn btn-sm btn-outline-info rounded-circle">
+                                <button class="btn btn-sm btn-outline-info rounded-circle" (click)="AtualizarProduto(produto.produtoId)">
                                     <fa-icon [icon]="faCheckCircle"></fa-icon>
                                 </button>
                             </td>

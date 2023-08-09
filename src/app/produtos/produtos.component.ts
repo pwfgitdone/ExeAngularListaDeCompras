@@ -40,4 +40,10 @@ export class ProdutosComponent implements OnInit {
     else { this.produtos = []; }
   }
 
+  AtualizarProduto(produtoId: string|undefined) {
+    const indice: number = this.produtos.findIndex(p => p.produtoId == produtoId);
+    this.produtos[indice].isComprado = !this.produtos[indice].isComprado;
+    localStorage.setItem('BD', JSON.stringify(this.produtos));
+  }
+
 }
