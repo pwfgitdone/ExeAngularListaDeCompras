@@ -27,6 +27,7 @@ export class ProdutosComponent implements OnInit {
   }
 
   CadastrarProduto(): void {
+    if (!this.formulario.value.nome || !this.formulario.value.quantidade) return;
     this.formulario.value.produtoId = Guid.create().toString();
     this.formulario.value.isComprado = false;
     const produto: Produto = this.formulario.value;
