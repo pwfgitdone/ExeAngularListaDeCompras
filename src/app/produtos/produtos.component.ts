@@ -16,6 +16,7 @@ export class ProdutosComponent implements OnInit {
   formulario: any;
 
   ngOnInit(): void {
+    this.ExibirProdutos();
     this.formulario = new FormGroup({
       produtoId: new FormControl(),
       nome: new FormControl(),
@@ -31,6 +32,12 @@ export class ProdutosComponent implements OnInit {
     this.produtos.push(produto);
     localStorage.setItem("BD", JSON.stringify(this.produtos));
     this.formulario.reset();
+  }
+
+  ExibirProdutos(): void {
+    let bd = localStorage.getItem("BD");
+    if(bd) { this.produtos = JSON.parse(bd); } 
+    else { this.produtos = []; }
   }
 
 }
