@@ -1,32 +1,28 @@
 <div class="p-5">
     <div class="container shadow p-5">
-        <div class="p-5 border border-light rounded">
-            <h3>Lista de Compras</h3>
+        <div class="p-5 border border-light rounded main">
+            <h1>Lista de Compras</h1>
             <hr>
 
             <form [formGroup]="formulario" (ngSubmit)="CadastrarProduto()">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control form-control-sm"
-                                placeholder="Nome do produto" formControlName="nome">
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="form-group">
-                                <input type="number" class="form-control form-control-sm"
-                                placeholder="Quantidade" formControlName="quantidade">
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <button type="submit" class="btn btn-outline-info btn-sm">Adicionar</button>
-                        </div>
+                <div class="container novoitem">
+                    <div class="form-group w80">
+                        <input type="text" class="form-control form-control-sm"
+                        placeholder="Nome do produto" formControlName="nome">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="number" class="form-control form-control-sm"
+                        placeholder="Quantidade" formControlName="quantidade">
+                    </div>
+
+                    <div>
+                        <button type="submit" class="btn btn-outline-info btn-sm">Adicionar</button>
                     </div>
                 </div>
             </form>
 
-            <div class="container">
+            <div class="container main">
                 <div class="pt-5 row" *ngIf="produtos?.length == 0">
                     <text class="text-danger">Sem produtos ainda</text>
                 </div>

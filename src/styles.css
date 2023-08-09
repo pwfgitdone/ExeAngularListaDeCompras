@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color:  rgb(1, 147, 244);
+    --secondary-color: #0F0F0B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 82.5%;
+}
+
+body {
+    background-color: var(--primary-color);
+    font: bold 2rem 'Open Sans', sans-serif;
+}

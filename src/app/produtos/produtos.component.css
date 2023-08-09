@@ -1,0 +1,38 @@
+.container {
+    background-color: #f7f1c0;
+}
+
+.main {
+    background-color: #f0eedd;
+}
+
+.novoitem{
+    display: flex;
+    background-color: #faee81;
+    width: 100%;
+    height: 70px;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 1px 1px 5px var(--secondary-color);
+    margin: 10px;
+    font: inherit;
+}
+
+.novoitem > div > input[type='text'] {
+    border: none;
+    width: 80%;
+    font: inherit;
+}
+
+.novoitem > div > input{
+    background-color: #faee81;
+    border: none;
+    width: 80%;
+    outline: none;
+    font: inherit;
+}
+
+.novoitem > div > input::placeholder {
+    font-style: italic;
+    font-weight: normal;
+}
